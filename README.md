@@ -1,6 +1,6 @@
 # AT&T/Olivetti Facial Recognition with Machine Learning and Deep Learning
 
-Using the AT&T Faces dataset ([ORL]() Database of Faces), this Python script uses machine learning algorithms (Random Forest and Logistic Regression) and a convolutional neural network (CNN) for facial recognition.  The models work to identify the subject in the image from a known database of 40 individuals each with 10 images.
+Using the [AT&amp;T Database of Faces](https://www.kaggle.com/datasets/kasikrit/att-database-of-faces) dataset ([ORL]() Database of Faces), this Python script uses machine learning algorithms (Random Forest and Logistic Regression) and a convolutional neural network (CNN) for facial recognition.  The models work to identify the subject in the image from a known database of 40 individuals each with 10 images.
 
 ---
 
@@ -23,8 +23,8 @@ Using the AT&T Faces dataset ([ORL]() Database of Faces), this Python script use
 
 **GitHub Documentation (25 points)**
 
-* [ ] GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)
-* [ ] The README is customized as a polished presentation of the content of the project (15 points)
+* [X] GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)
+* [X] The README is customized as a polished presentation of the content of the project (15 points)
 
 **Group Presentation (25 points)**
 
