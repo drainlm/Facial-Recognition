@@ -36,46 +36,46 @@ Using the sklearn library, the data is split into training and test sets. A rand
 
 The Random Forest model demonstrates high precision, recall, and F1-scores for most classes (40 individuals), indicating its ability to correctly classify images of different individuals. The weighted average values show that the model's performance is consistent across all classes, considering the support values (2 images for each individual). The overall accuracy of 95% indicates the model's strong classification capability.
 
-![1686194064477](image/README/1686194064477.png)
+![1686202925729](image/README/1686202925729.png)
 
-![1686194125584](image/README/1686194125584.png)
+![1686202944455](image/README/1686202944455.png)
 
-![1686196938521](image/README/1686196938521.png)
+![1686202958003](image/README/1686202958003.png)
 
 ##### 
     Logistic Regression Model
 
 The Logistic Regression model has high accuracy, sensitivity, and specificity in correctly identifying individuals from their images, making it highly reliable for facial recognition tasks in this dataset.
 
-![1686194162581](image/README/1686194162581.png)
+![1686202968636](image/README/1686202968636.png)
 
-![1686194195317](image/README/1686194195317.png)
+![1686202978524](image/README/1686202978524.png)
 
-![1686196953585](image/README/1686196953585.png)
+![1686202989123](image/README/1686202989123.png)
 
 ### CNN Model
 
 The images are reshaped and normalized, and the labels are one-hot encoded. The CNN model is then compiled using the keras library and fit to the training data. The model's accuracy is then evaluated on the test data. Through an optimization process, each model version is saved individually to show iterative changes made to the model and the performance. 
 
-![1686196274964](image/README/1686196274964.png)
+![1686202997213](image/README/1686202997213.png)
 
-![1686196325094](image/README/1686196325094.png)
+![1686203004658](image/README/1686203004658.png)
 
 CNN Version 4 model has three convolutional layers (extracting relevant features from the images), uses a 3x3 kernel and the ReLU activation function. The number of filters is set to 32 for each layer and the 'he_uniform' kernel initializer is used to initialize the weights. After each layer, a max poolying layer with a 2x2 pool size is applied, which helps reduce the spatial dimensions of the extracted features so the most important information can be focused on. The output of the last max pooling layer flattens into a 1d vector. These flattened features are fed into two dense layers. The first dense layer consists of 100 units with the ReLU activation function and 'he_uniform' kernel initializer. The second dense layer consists of 40 units with the softmax activation funcation to produce probabilities for each of the 40 individuals. The model is compiled using the Adam optimizer, categorical cross-entropy loss funcation, and accuracy as the evaluation metric. 
 
 In terms of performance, the CNN Version 4 model demonstrates reasonable performance, but further investigation and fine-tuning is needed to improve its accuracy and performance on specific classes with lower scores.
 
-![1686196073960](image/README/1686196073960.png)
+![1686203013332](image/README/1686203013332.png)
 
-![1686196115094](image/README/1686196115094.png)
+![1686203021248](image/README/1686203021248.png)
 
-![1686197247363](image/README/1686197247363.png)
+![1686203030290](image/README/1686203030290.png)
 
 ### Comparative Visualizations
 
-![1686196455191](image/README/1686196455191.png)
+![1686203039953](image/README/1686203039953.png)
 
-![1686196404442](image/README/1686196404442.png)
+![1686203378605](image/README/1686203378605.png)
 
 ### References
 
