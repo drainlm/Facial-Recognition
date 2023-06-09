@@ -1,6 +1,8 @@
 
 # AT&T/Olivetti Facial Recognition with Machine Learning and Deep Learning
 
+**Group 4: Lisa Drain, Shoaib Farooqui, Dominic Marin, Francisco Latimer**
+
 Facial recognition can be useful in practically any industry for security, verification, or VIP treatment purposes. This project's primary objective is accurately identify the subject in an image from the [ATT Database of Faces](https://www.kaggle.com/datasets/kasikrit/att-database-of-faces) dataset ([ORL]() Database of Faces). The dataset consists of 40 individuals each with 10 images.
 
 This Python script experiments with three different models (Random Forest, Logistic Regression, and CNN) to asses their suitability, performance, and potential for real-world application. While Random Forest and Logistic Regression employ traditional machine learning algorithms, CNN's deep learning architecture is specifically designed for image-related tasks. By comparing these three models, we hope to gain a better understanding of the capabilities of machine learning and deep learning in the field of facial recogntion.
