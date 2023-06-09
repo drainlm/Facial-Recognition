@@ -60,29 +60,35 @@ The images are reshaped and normalized, and the labels are one-hot encoded. The 
 
 ![1686289909231](image/README/1686289909231.png)
 
-#### CNN Model Version 4
+#### CNN Model Version 9
 
-CNN Version 4 model has three convolutional layers (extracting relevant features from the images), uses a 3x3 kernel and the ReLU activation function. The number of filters is set to 32 each of the three layers and the 'he_uniform' kernel initializer is used to initialize the weights. After each layer, a max poolying layer with a 2x2 pool size is applied, which helps reduce the spatial dimensions of the extracted features so the most important information can be focused on. The output of the last max pooling layer flattens into a 1d vector. These flattened features are fed into two dense layers. The first dense layer consists of 100 units with the ReLU activation function and 'he_uniform' kernel initializer. The second dense layer consists of 40 units with the softmax activation funcation to produce probabilities for each of the 40 individuals. The model is compiled using the Adam optimizer, categorical cross-entropy loss funcation, and accuracy as the evaluation metric. 
+CNN Version 9 model has three convolutional layers (extracting relevant features from the images), uses a 3x3 kernel and the ReLU activation function. The number of filters is set to 32 each of the three layers and the 'he_uniform' kernel initializer is used to initialize the weights. After each layer, a max poolying layer with a 2x2 pool size is applied, which helps reduce the spatial dimensions of the extracted features so the most important information can be focused on. The output of the last max pooling layer flattens into a 1d vector. These flattened features are fed into two dense layers. The first dense layer consists of 256 neurons and the second dense layer consists of 128 neurons with the ReLU activation function and 'he_uniform' kernel initializer. The final dense layer consists of 40 neurons with the softmax activation funcation to produce probabilities for each of the 40 individuals. The model is compiled using the Adam optimizer, categorical cross-entropy loss funcation, and accuracy as the evaluation metric.
 
-![1686289962937](image/README/1686289962937.png)
+![1686292250519](image/README/1686292250519.png)
 
-In terms of performance, the CNN Version 4 model demonstrates reasonable performance, but further investigation and fine-tuning would be needed to improve its accuracy and performance on specific classes with lower scores. One possible reason for the poor performance could be that the dataset is relatively small with only 400 images. CNN models One thing to note is that the dataset is relatively small, consistenting of only 400 images. This may make it difficult for the CNN to learn complex patterns or to generalize them effectively.
+In terms of performance, the CNN Version 9 model demonstrates reasonable performance, but further investigation and fine-tuning would be needed to improve its accuracy and performance on specific classes with lower scores. 
 
-![1686290518875](image/README/1686290518875.png)
+![1686292440941](image/README/1686292440941.png)
 
-![1686290498019](image/README/1686290498019.png)
+![1686292424993](image/README/1686292424993.png)
 
-![1686290476186](image/README/1686290476186.png)
+![1686292463787](image/README/1686292463787.png)
 
 ### Comparative Visualizations
 
-![1686290589307](image/README/1686290589307.png)
+![1686292485315](image/README/1686292485315.png)
 
-![1686290633690](image/README/1686290633690.png)
+![1686292502589](image/README/1686292502589.png)
 
 ### Conclusions
 
-Logistic Regression performed the best....
+Our results revealed that Logistic Regression achieved the highest performance, with an impressive accuracy of 100%. This model demonstrated excellent precision, recall, and F1-scores, indicating its reliability in correctly classifying images across different individuals. Logistic Regression can be considered a strong choice for facial recognition tasks in this dataset.
+
+The Random Forest model also exhibited excellent performance, achieving an accuracy of 98.75%. It demonstrated high precision, recall, and F1-scores for most classes, further validating its effectiveness in correctly identifying individuals from their images. Random Forest can be considered a robust alternative for facial recognition, especially when dealing with complex feature interactions.
+
+Although the CNN model achieved a lower accuracy of 93.75%, it still demonstrated reasonable performance. The CNN architecture, specifically designed for image-related tasks, extracted relevant features from the images and learned spatial dependencies. However, the smaller dataset size of 400 images may have limited the model's ability to learn complex patterns, leading to slightly lower accuracy. Further investigation and fine-tuning would be needed to improve its accuracy and performance, particularly on classes with lower scores.
+
+The findings of this project highlight the strengths of Logistic Regression and Random Forest models for facial recognition tasks, showcasing their high accuracy and reliability. Moreover, the exploration of the CNN model provides valuable insights into the potential of deep learning approaches for image recognition, although with some considerations for dataset size.
 
 ### PySpark
 
