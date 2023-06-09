@@ -72,7 +72,7 @@ In terms of performance, the CNN Version 9 model demonstrates reasonable perform
 
 ![1686292424993](image/README/1686292424993.png)
 
-![1686292463787](image/README/1686292463787.png)
+![1686293083058](image/README/1686293083058.png)
 
 ### Comparative Visualizations
 
