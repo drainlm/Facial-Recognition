@@ -1,6 +1,6 @@
 # AT&T/Olivetti Facial Recognition with Machine Learning and Deep Learning
 
-**Group 4: Lisa Drain, Shoaib Farooqui, Dominic Marin, Francisco Latimer**
+**Group 4: Lisa Drain, Shoaib Farooqui, Dominic Marin, and Francisco Latimer**
 
 Facial recognition can be useful in practically any industry for security, verification, or VIP treatment purposes. This project's primary objective is accurately identify the subject in an image from the [ATT Database of Faces](https://www.kaggle.com/datasets/kasikrit/att-database-of-faces) dataset (also known as the ORL Database of Faces). The dataset consists of 40 subjects (individuals) each with 10 images.
 
