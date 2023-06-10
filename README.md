@@ -4,7 +4,7 @@
 
 Facial recognition can be useful in practically any industry for security, verification, or VIP treatment purposes. This project's primary objective is accurately identify the subject in an image from the [ATT Database of Faces](https://www.kaggle.com/datasets/kasikrit/att-database-of-faces) dataset (also known as the ORL Database of Faces). The dataset consists of 40 subjects (individuals) each with 10 images.
 
-This Python script experiments with three different models (Random Forest, Logistic Regression, and CNN) to assess their suitability, performance, and potential for real-world application. While Random Forest and Logistic Regression employ traditional machine learning algorithms, CNN's deep learning architecture is specifically designed for image-related tasks. By comparing these three models, we hope to gain a better understanding of the capabilities of machine learning and deep learning in the field of facial recognition.
+This Python script experiments with three different models (Random Forest, Logistic Regression, and a Convolutional Neural Network) to assess their suitability, performance, and potential for real-world application. While Random Forest and Logistic Regression employ traditional machine learning algorithms, CNN's deep learning architecture is specifically designed for image-related tasks. By comparing these three models, we hope to gain a better understanding of the capabilities of machine learning and deep learning in the field of facial recognition.
 
 ### Dependencies
 
@@ -71,7 +71,7 @@ CNN Version 9 model has three convolutional layers (extracting relevant features
 
 ##### CNN Model Version 9 Results
 
-In terms of performance, the CNN Version 9 model demonstrates a reasonably high performance with an accuracy of 98.75% (misclassifiying 2 images) and a test loss of 0.0464
+In terms of performance, the CNN Version 9 model demonstrates a high performance with an accuracy of 98.75% (misclassifying 2 images) and a test loss of 0.0464
 
 ![1686368371235](image/README/1686368371235.png)
 
