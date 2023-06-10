@@ -29,6 +29,8 @@ The entire dataset is visualized. Then a selected individual's set can be define
 
 ![1686291199020](image/README/1686291199020.png)
 
+Note on a lacking diversity: Of the 40 people, 35 are white men, 4 white women, and there is 1 Black man. Machine learning models learn patterns from the data they are trained on, and if the dataset primarily consists of a specific demographic, the model may not perform well when encountering individuals from diverse backgrounds. It is crucial to address these issues to avoid misidentification and discrimination. Due to the scope and time constraints of this project, this is not something that could be addressed, but it would be an important discussion for further exploration of performance and the implications of the model on this limited dataset.
+
 ### Machine Learning Models
 
 Using the sklearn library, the data is split into training and test sets. A random seed `<random_state=1>` was selected across all three models to ensure reproducibility and to provide more valid and consistent comparison of their performance. Stratification was also used across all three to maintain the same distribution of classes in both training and testing sets. And a testing size of 20% was applied across all models as well, enabling fair evaluation of each model's performance. 
