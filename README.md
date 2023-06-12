@@ -25,7 +25,7 @@ The data is extracted from a zip file named Faces.zip, converted to grayscale, a
 
 ### Exploratory Data Analysis
 
-The entire dataset is visualized. Then a selected individual's set can be defined and displayed (this was very useful while developing the code as a reference point for performance). 
+The entire dataset is visualized. Then a selected individual's set can be defined and displayed (this was very useful while developing the code as a reference point for performance).
 
 ![1686291199020](image/README/1686291199020.png)
 
@@ -33,7 +33,7 @@ Note on a lacking diversity: Of the 40 people, 35 are white men, 4 white women, 
 
 ### Machine Learning Models
 
-Using the sklearn library, the data is split into training and test sets. A random seed `<random_state=1>` was selected across all three models to ensure reproducibility and to provide more valid and consistent comparison of their performance. Stratification was also used across all three to maintain the same distribution of classes in both training and testing sets. And a testing size of 20% was applied across all models as well, enabling fair evaluation of each model's performance. 
+Using the sklearn library, the data is split into training and test sets. A random seed `<random_state=1>` was selected across all three models to ensure reproducibility and to provide more valid and consistent comparison of their performance. Stratification was also used across all three to maintain the same distribution of classes in both training and testing sets. And a testing size of 20% was applied across all models as well, enabling fair evaluation of each model's performance.
 
 Note: A testing size of 25% was tested across all three models, which resulted in lower accuracy across all three models (Random Forest 93.33%, Logistic Regression: 97.50%, and CNN_V9: 92.50%), likely due to the more limited training data. The code for this can be found in the repo under `<25_Percent_Training.ipynb>`.
 
@@ -65,7 +65,7 @@ For CNN, the images are reshaped and normalized, and the labels are one-hot enco
 
 Note on versions: While the README showcases nine versions of the CNN model, it is important to note that additional iterations were explored to further refine the model's performance. These additional iterations involved changes such as different activation functions (e.g., Leaky ReLU), alternative weight initialization techniques (e.g., Lecun and Xavier/Glorot), the inclusion of batch normalization, and attempts at data augmentation. Due to the computational expense, these additional attempts were not fully explored or incorporated into the final implementation.
 
-#### CNN Model Version 9 
+#### CNN Model Version 9
 
 CNN Version 9 model has three convolutional layers (extracting relevant features from the images), uses a 3x3 kernel and the ReLU activation function. The number of filters is set to 32 each of the three layers and the 'he_uniform' kernel initializer is used to initialize the weights. After each layer, a max poolying layer with a 2x2 pool size is applied, which helps reduce the spatial dimensions of the extracted features so the most important information can be focused on. The output of the last max pooling layer flattens into a 1d vector. These flattened features are fed into two dense layers. The first dense layer consists of 256 neurons and the second dense layer consists of 128 neurons with the ReLU activation function and 'he_uniform' kernel initializer. The final dense layer consists of 40 neurons with the softmax activation funcation to produce probabilities for each of the 40 individuals. The model is compiled using the Adam optimizer, categorical cross-entropy loss funcation, and accuracy as the evaluation metric.
 
@@ -99,9 +99,13 @@ The findings of this project highlight the strengths of Random Forest, Logistic 
 
 ### A Note on Pixel Intensity and PySpark
 
-Based on an early hypothesis that there could be a correlation between misclassification and pixel intensity, the average pixel intensity for each subject's set of 10 images was calculated. A correlation was not found. However, this information was loaded into PySpark (primarily to satisfy part of a grading rubric for this project) and it is possible that with some additional digging and loading of data some relevant information could be retrieved for further exploration. The section should be in Exploratory Data Analysis, however it is placed here to avoid confusion since it wasn't pursued further. 
+Based on an early hypothesis that there could be a correlation between misclassification and pixel intensity, the average pixel intensity for each subject's set of 10 images was calculated. A correlation was not found. However, this information was loaded into PySpark (primarily to satisfy part of a grading rubric for this project) and it is possible that with some additional digging and loading of data some relevant information could be retrieved for further exploration. The section should be in Exploratory Data Analysis, however it is placed here to avoid confusion since it wasn't pursued further.
 
 ![1686290672734](image/README/1686290672734.png)![1686290844570](image/README/1686290844570.png)
+
+### Note: 
+
+For the misclassification visualization, you'll see a True image and a Predicted image. While the True image depicts the testing image, the Predicted image is just the first picture in the indvidual subject's set of 10 pictures. 
 
 ### References
 
